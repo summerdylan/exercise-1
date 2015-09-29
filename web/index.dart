@@ -21,7 +21,7 @@ void reverseText(MouseEvent event) {
   querySelector('#sample_text_id').text = buffer.toString();
 }
 
-
+ 
 
 void plus1(MouseEvent event) {
   var stuMap={
