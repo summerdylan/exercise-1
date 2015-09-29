@@ -20,14 +20,14 @@ void addTwoNumber(MouseEvent event){
   querySelector('#sample_text_id2').text=addNumber(x,y).toString();
 }
 
-//void reverseText(MouseEvent event) {
- // var text = querySelector('#sample_text_id').text;
-  //var buffer = new StringBuffer();
- // for (int i = text.length - 1; i >= 0; i--) {
- //   buffer.write(text[i]);
- // }
-//  querySelector('#sample_text_id').text = buffer.toString();
-//}
+void reverseText(MouseEvent event) {
+ var text = querySelector('#sample_text_id').text;
+  var buffer = new StringBuffer();
+    for (int i = text.length - 1; i >= 0; i--) {
+ buffer.write(text[i]);
+  }
+ querySelector('#sample_text_id').text = buffer.toString();
+}
 
 void randomSelectStu(MouseEvent event) {
   var stuMap={
