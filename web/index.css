@@ -1,0 +1,46 @@
+body {
+  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+}
+
+h1, p {
+  color: #333;
+}
+
+#sample_container_id {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#sample_text_id {
+  font-size: 50pt;
+  text-align:center;
+  margin-top: 140px;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #00B5AB;
+}
+
+#button_add_id {
+    font-size:20pt;
+    width:100px;
+    color:#41C1BC;
+}
+
+#number_a{
+  font-size: 20pt;
+}
+#number_b{
+  font-size: 20pt;
+}
+#sample_text_id2 {
+  font-size:30pt;
+  text-align: center;
+}
