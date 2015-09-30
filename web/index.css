@@ -26,10 +26,17 @@ h1, p {
   -webkit-user-select: none;
   user-select: none;
 }
-#sample_studentid_id {
+#sample_add_id {
   font-size: 24pt;
   text-align: center;
-  margin-top: 140px;
+  margin-top: 10px;
   -webkit-user-select: none;
   user-select: none;
+}
+#text1{
+  margin-left:500px;
+  text-align: center;
+}
+#text2{
+  text-align: center;
 }
