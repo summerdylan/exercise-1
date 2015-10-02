@@ -10,13 +10,17 @@
 <h1>Myconference</h1>
 <p>Hello world from Dart!</p>
 <div id="sample_container_id">
-  <input type="button" id="sample_text_id" value="Click" onClick="javascript:{this.disabled=true;document.add.submit();}" onfocus="'this.value='" onblur="this.value='得数'">
-  <div id="sample_student_id">
-    <input  id="sample_studentone_id" value="数字1">
-    <input type="text" id="sample_symbol_id" value="+">
-    <input type="text" id="sample_studenttwo_id" value="数字2">
-    <input type="text" id="sample_symbol_id" value="=">
-    <input type="text" id="sample_studentid_id" value="得数">
+  <div id="sample_containleft_id">
+    <input type="button" id="sample_text_id" value="AddNumber" onClick="javascript:{this.disabled=true;document.add.submit();}" onfocus="'this.value='" onblur="this.value='加法得数'">
+    <input type="button" id="sample_text1_id" value="For i=1 to 100" onClick="javascript:{this.disabled=true;document.add.submit();}" onfocus="'this.value='" onblur="this.value='得数'">
+    <div id="sample_student_id">
+      <input  id="sample_studentone_id" value="数字1">
+      <input type="text" id="sample_symbol_id" value="+">
+      <input type="text" id="sample_studenttwo_id" value="数字2">
+      <input type="text" id="sample_symbolx_id" value="=">
+      <input type="text" id="sample_studentid_id" value="得数">
+      <input type="text" id="sample_add_id" value="得数">
+    </div>
   </div>
 </div>
 <script type="application/dart" src="index.dart"></script>
