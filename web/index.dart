@@ -1,37 +1,29 @@
 import 'dart:html';
-
-
-//String str;
-int sum=0;
-bool check=false;
-
+import 'dart:math' as math;
 void main() {
   querySelector('#sample_text_id')
-    ..text = 'Please input the start number and the end number!'+' \r\nThen click here!'
-    ..onClick.listen(Oh);
-}
-int add([int k]){
-  sum=sum+k+1;
-  return sum;
+    ..text = 'Click me!'
+    ..onClick.listen((MouseEvent e)=>randomStudentID("you!",e));
 }
 
-
-void Oh(MouseEvent event) {
-  InputElement num1, num2;
-  num1 = document.getElementById("F1");
-  num2 = document.getElementById("F2");
-  int i = int.parse(num1.value);
-  int j = int.parse(num2.value);
-  sum = i;
-  if (check == false) {
-    querySelector('#sample_text_id').text = '';
-    for (int k = i;k < j;k++) {
-      querySelector('#sample_text_id').text = querySelector('#sample_text_id').text + '\r\n' + sum.toString() + '+' + (k + 1).toString() + '=' + add(k).toString();
-    }
-  } else {
-    //querySelector('#sample_text_id').text = '';
-    querySelector('#sample_text_id').text = 'Please input the start number and the end number!';
-    check = true;
+void reverseText(MouseEvent event) {
+  var text = querySelector('#sample_text_id').text;
+  var buffer = new StringBuffer();
+  for (int i = text.length - 1; i >= 0; i--) {
+    buffer.write(text[i]);
   }
+  querySelector('#sample_text_id').text = buffer.toString();
 }
-
+void randomStudentID(String showStr,MouseEvent even){
+  var students={
+    0:10001,
+    1:10002,
+    2:100003,
+    3:100004,
+    4:100005,
+    5:100005
+  };
+  var random = new math.Random();
+  var getYou=students[random.nextInt(6)];
+  querySelector('#sample_studentid_id').text = getYou.toString()+showStr;
+}
