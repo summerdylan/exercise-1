@@ -3,10 +3,8 @@ import 'dart:math' as math ;
 
 void main() {
   querySelector('#sample_text_id')
-    ..text = 'Click me first!'
-    ..onClick.listen(randomSelectStu);
-
-  querySelector('#sample_text_id').text = addDo(2,4).toString();
+    ..text = '1+2+...+100='
+    ..onClick.listen(oneHundred);
 
   querySelector('#button_add_id')
     ..text='Add'
@@ -24,30 +22,15 @@ void addThemUp(MouseEvent event){
   querySelector('#sample_text_id2').text=addDo(x,y).toString();
 }
 
-void reverseText(MouseEvent event) {
-  var text = querySelector('#sample_text_id').text;
-  var buffer = new StringBuffer();
-  for (int i = text.length - 1; i >= 0; i--) {
-    buffer.write(text[i]);
+void oneHundred(MouseEvent event){
+  var sum = 0;
+  for(var i=1;i<=100;i++){
+    sum=sum+i;
   }
-  querySelector('#sample_text_id').text = buffer.toString();
+  querySelector('#sample_text_id').text =sum.toString();
 }
 
-void randomSelectStu(MouseEvent event){
 
-  var stuMap={
-    0:'10130340101',
-    1:'10130340102',
-    2:'10130340103'
-  };
 
-  var random = new math.Random();
-
-  var randomID = random.nextInt(3);
-
-  var stuID = stuMap[randomID];
-
-  querySelector('#sample_text_id').text = stuID;
-}
 
 
