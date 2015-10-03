@@ -1,29 +1,18 @@
 import 'dart:html';
-import 'dart:math' as math;
 void main() {
-  querySelector('#sample_text_id')
-    ..text = 'Click me!'
-    ..onClick.listen((MouseEvent e)=>randomStudentID("you!",e));
+  querySelector('#button').onClick.listen((MouseEvent e)=>start(int.parse(document.getElementById("text1").value),int.parse(document.getElementById("text2").value),e));
+  querySelector('#button2')
+    ..onClick.listen((MouseEvent e)=>start(1,100,e))
+    ..onClick.listen(start1);
 }
-
-void reverseText(MouseEvent event) {
-  var text = querySelector('#sample_text_id').text;
-  var buffer = new StringBuffer();
-  for (int i = text.length - 1; i >= 0; i--) {
-    buffer.write(text[i]);
+void start(int origin1,int origin2,MouseEvent e){
+  int sum=0;
+  for(int i = origin1; i <= origin2; i++){
+    sum=sum+i;
   }
-  querySelector('#sample_text_id').text = buffer.toString();
+  querySelector('#text3').value=sum.toString();
 }
-void randomStudentID(String showStr,MouseEvent even){
-  var students={
-    0:10001,
-    1:10002,
-    2:100003,
-    3:100004,
-    4:100005,
-    5:100005
-  };
-  var random = new math.Random();
-  var getYou=students[random.nextInt(6)];
-  querySelector('#sample_studentid_id').text = getYou.toString()+showStr;
+void start1(MouseEvent e){
+  querySelector('#text1').value=1.toString();
+  querySelector('#text2').value=100.toString();
 }
