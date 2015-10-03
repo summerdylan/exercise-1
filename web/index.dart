@@ -14,8 +14,7 @@ int yunSuan(){
   return s;
 }
 void getnumber(mouseevent event){//得到文本框中数字
-  string a=querySelector('#text1').text;
-  shuchu(a);
+  string a=querySelector("#text1");
 }
 void shuchu(string s){
   querySelector("#sample_text_id")
